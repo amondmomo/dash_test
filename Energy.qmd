@@ -1,6 +1,6 @@
 ---
 title: "에너지사용량 자료 분석"
-author: "이정민"
+author: "본인이름~"
 format: dashboard
 execute: 
   enabled: true
@@ -16,6 +16,7 @@ import plotly.express as px
 import plotly.io as pio
 import json
 import requests
+!pip install itables
 
 pd.options.plotting.backend = "plotly"
 pio.templates.default = "plotly_white"
