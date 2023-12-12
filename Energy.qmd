@@ -16,7 +16,6 @@ import plotly.express as px
 import plotly.io as pio
 import json
 import requests
-!pip install itables
 
 pd.options.plotting.backend = "plotly"
 pio.templates.default = "plotly_white"
