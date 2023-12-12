@@ -95,11 +95,11 @@ fig3  = px.line_mapbox(
     line_group='id',
     #---#
     mapbox_style = 'carto-positron',
-    zoom=11,
-).for_each_trace(lambda t: t.update(name=t.name.replace('매우빠름','매우빠름 (pickup/dropoff)')))\
-.for_each_trace(lambda t: t.update(name=t.name.replace('조금빠름','조금빠름 (pickup/dropoff)')))\
-.for_each_trace(lambda t: t.update(name=t.name.replace('조금느림','조금느림 (pickup/dropoff)')))\
-.for_each_trace(lambda t: t.update(name=t.name.replace('매우느림','매우느림 (pickup/dropoff)')))
+    zoom=10,
+).for_each_trace(lambda t: t.update(name=t.name.replace('매우빠름','매우빠름 (path)')))\
+.for_each_trace(lambda t: t.update(name=t.name.replace('조금빠름','조금빠름 (path)')))\
+.for_each_trace(lambda t: t.update(name=t.name.replace('조금느림','조금느림 (path)')))\
+.for_each_trace(lambda t: t.update(name=t.name.replace('매우느림','매우느림 (path)')))
 
 scatter_data = px.scatter_mapbox(
     data_frame=tidydata,
@@ -111,10 +111,10 @@ scatter_data = px.scatter_mapbox(
     #---#
     mapbox_style = 'carto-positron',
     zoom=11
-).for_each_trace(lambda t: t.update(name=t.name.replace('매우빠름','매우빠름(path)')))\
-.for_each_trace(lambda t: t.update(name=t.name.replace('조금빠름','조금빠름(path)')))\
-.for_each_trace(lambda t: t.update(name=t.name.replace('조금느림','조금느림(path)')))\
-.for_each_trace(lambda t: t.update(name=t.name.replace('매우느림','매우느림(path)'))).data
+).for_each_trace(lambda t: t.update(name=t.name.replace('매우빠름','매우빠름 (pickup/dropoff)')))\
+.for_each_trace(lambda t: t.update(name=t.name.replace('조금빠름','조금빠름 (pickup/dropoff)')))\
+.for_each_trace(lambda t: t.update(name=t.name.replace('조금느림','조금느림 (pickup/dropoff)')))\
+.for_each_trace(lambda t: t.update(name=t.name.replace('매우느림','매우느림 (pickup/dropoff)'))).data
 for sd in scatter_data:
   fig3.add_trace(sd)
 fig3.update_traces(
