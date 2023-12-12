@@ -95,7 +95,7 @@ fig3  = px.line_mapbox(
     line_group='id',
     #---#
     mapbox_style = 'carto-positron',
-    zoom=10,
+    zoom=11,
 ).for_each_trace(lambda t: t.update(name=t.name.replace('매우빠름','매우빠름 (path)')))\
 .for_each_trace(lambda t: t.update(name=t.name.replace('조금빠름','조금빠름 (path)')))\
 .for_each_trace(lambda t: t.update(name=t.name.replace('조금느림','조금느림 (path)')))\
